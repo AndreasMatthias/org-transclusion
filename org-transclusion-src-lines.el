@@ -47,6 +47,8 @@
 (add-hook 'org-transclusion-keyword-value-functions
           #'org-transclusion-keyword-value-end)
 (add-hook 'org-transclusion-keyword-value-functions
+           #'org-transclusion-keyword-value-noweb-chunk)
+(add-hook 'org-transclusion-keyword-value-functions
           #'org-transclusion-keyword-value-thing-at-point)
 ;; plist back to string
 (add-hook 'org-transclusion-keyword-plist-to-string-functions
@@ -127,6 +129,7 @@ it means from line 10 to the end of file."
          (entry-pos) (buf)
          (lines (plist-get plist :lines))
          (end-search-op (plist-get plist :end))
+	 (noweb-chunk (plist-get plist :noweb-chunk))
          (thing-at-point (plist-get plist :thing-at-point))
          (thing-at-point (when thing-at-point
                            (make-symbol (cadr (split-string thing-at-point))))))
@@ -145,8 +148,9 @@ it means from line 10 to the end of file."
                                    ;; FIXME `org-link-search' does not
                                    ;; return position when eithher
                                    ;; ::/regex/ or ::number is used
-                                   (if (org-link-search search-option)
-                                       (line-beginning-position))))))
+                                   (when (org-link-search search-option)
+				       (when noweb-chunk (next-line))
+				       (line-beginning-position))))))
                             ((point-min))))
                 (bounds (when thing-at-point
                           (let ((count (if end-search-op
@@ -163,7 +167,12 @@ it means from line 10 to the end of file."
                                       ;; return position when either ::/regex/
                                       ;; or ::number is used
                                       (when (org-link-search end-search-op)
-                                        (line-beginning-position))))))))
+                                        (line-beginning-position))))))
+			       ((when noweb-chunk
+				  (save-excursion
+				    (goto-char (1+ start-pos))
+				    (when (re-search-forward "^\\(@\\|<<.*?>>=\\)" nil t)
+				      (line-beginning-position)))))))
                 (range (when lines (split-string lines "-")))
                 (lbeg (if range (string-to-number (car range))
                         0))
@@ -253,6 +262,11 @@ Double qutations are mandatory"
   (when (string-match ":end +\"\\(.*\\)\"" string)
     (list :end (org-strip-quotes (match-string 1 string)))))
 
+(defun org-transclusion-keyword-value-noweb-chunk (string)
+  (when (string-match ":noweb-chunk" string)
+    (list :noweb-chunk
+          (org-strip-quotes (match-string 0 string)))))
+
 (defun org-transclusion-keyword-plist-to-string-src-lines (plist)
   "Convert a keyword PLIST to a string.
 This function is meant to be used as an extension for function
@@ -263,12 +277,14 @@ abnormal hook
         (src (plist-get plist :src))
         (rest (plist-get plist :rest))
         (end (plist-get plist :end))
+	(noweb-chunk (plist-get plist :noweb-chunk))
         (thing-at-point (plist-get plist :thing-at-point)))
     (concat
      (when lines (format ":lines %s" lines))
      (when src (format " :src %s" src))
      (when rest (format " :rest \"%s\"" rest))
      (when end (format " :end \"%s\"" end))
+     (when noweb-chunk " :noweb-chunk")
      (when thing-at-point (format " %s" thing-at-point)))))
 
 (defun org-transclusion-src-lines-p (type)
