@@ -1437,10 +1437,14 @@ property controls the filter applied to the transclusion."
           (narrow-to-region beg end))
         (setq obj (org-element-parse-buffer))
         (setq obj (org-transclusion-content-org-filter only-element obj plist))
-        (list :src-content (org-element-interpret-data obj)
+	(list :src-content (org-transclusion-trim-right (org-element-interpret-data obj))
               :src-buf (current-buffer)
               :src-beg (point-min)
               :src-end (point-max))))))
+
+(defun org-transclusion-trim-right (content)
+  "Remove blank lines at end of CONTENT."
+  (concat (string-trim-right content) "\n"))
 
 (defun org-transclusion-content-org-filter (only-element obj plist)
   ;; Apply `org-transclusion-exclude-elements'
