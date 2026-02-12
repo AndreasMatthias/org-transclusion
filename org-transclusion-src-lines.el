@@ -209,7 +209,7 @@ it means from line 10 to the end of file."
                          ;; Ensure to include the \n into the end point
                          (1+ (point))))))
                 (content (buffer-substring-no-properties beg end)))
-           (list :src-content (org-transclusion-trim-right content)
+           (list :src-content content
                  :src-buf (current-buffer)
                  :src-beg beg
                  :src-end end)))))))
