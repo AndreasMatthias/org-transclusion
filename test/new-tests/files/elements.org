@@ -1,0 +1,90 @@
+* Chapter
+Lorem ipsum dolor sit amet.
+** Section 1
+Consectetur adipiscing elit.
+*** Subsection 1a
+** Section 2
+Cras vehicula tellus ipsum
+
+* Comments
+** Line comments
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+# This is a comment
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+** Block comments
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+#+begin_comment
+this is a block comment
+#+end_comment
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+* Horizontal rules
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+-----
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+* Plain list
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+ * lorem
+ * ipsum
+ * dolor
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+* Table
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+| lorem  | ipsum    | dolor  |
+|--------+----------+--------|
+| cras   | vehicula | tellus |
+| aenean | iaculis  | ligula |
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+* LaTeX
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+\begin{equation}
+a^2 + b^2 = c^2
+\end{equation}
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+* Example
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+#+begin_example
+This is an example ...
+#+end_example
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+* Quotation
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+#+begin_quote
+This is a quotation ...
+#+end_quote
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.

@@ -1,0 +1,29 @@
+* Test Scope
+
+ * ~:thing-at-point~
+
+* Tests
+** Non-org files
+-----
+#+transclude: [[./files/thing-at-point.txt::Nullam]]  :thing-at-point sentence
+-----
+#+transclude: [[./files/thing-at-point.txt::Nullam]]  :thing-at-point paragraph
+-----
+
+** Org files
+The following only works if ~org-link-search-must-match-exact-headline~ is ~nil~,
+i.e. only for fuzzy search.
+FIXME However it seems to be broken currently.
+-----
+# #+transclude: [[./files/thing-at-point.org::Nullam]]  :thing-at-point sentence
+-----
+# #+transclude: [[./files/thing-at-point.org::Nullam]]  :thing-at-point paragraph
+-----
+
+** Broken
+FIXME While ~defun~ and ~sexp~ are documented as functional, they are currently broken.
+-----
+# #+transclude: [[./files/thing-at-point.el::id-123]]  :src emacs-lisp :thing-at-point defun
+-----
+# #+transclude: [[./files/thing-at-point.el::id-123]]  :src emacs-lisp :thing-at-point sexp
+-----

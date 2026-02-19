@@ -1,0 +1,29 @@
+* Test Scope
+
+ * ~:exclude-elements~
+
+* Tests
+FIXME Is it correct? I guess so. But intuitively I'd expect to see
+            1. all paragraphs of all subsections and
+            2. no headlines, not even the very first one.
+-----
+#+transclude: [[./files/elements.org::*Chapter]] :exclude-elements "headline"
+-----
+#+transclude: [[./files/elements.org::*Chapter]] :exclude-elements "paragraph"
+-----
+#+transclude: [[./files/elements.org::*Comments]] :exclude-elements "comment comment-block"
+-----
+#+transclude: [[./files/elements.org::*Horizontal rules]] :exclude-elements "horizontal-rule"
+-----
+#+transclude: [[./files/elements.org::*Plain list]] :exclude-elements "plain-list"
+-----
+#+transclude: [[./files/elements.org::*Table]] :exclude-elements "table"
+-----
+#+transclude: [[./files/elements.org::*LaTeX]] :exclude-elements "latex-environment"
+-----
+#+transclude: [[./files/elements.org::*Example]] :exclude-elements "example-block"
+-----
+#+transclude: [[./files/elements.org::*Quotation]] :exclude-elements "quote-block"
+-----
+#+transclude: [[./files/elements.org]] :exclude-elements "comment comment-block horizontal-rule plain-list table latex-environment example-block quote-block"
+-----

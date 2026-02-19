@@ -1,0 +1,21 @@
+* Test Scope
+
+ * blank lines (at end of file)
+
+* Tests
+** Org files
+-----
+#+transclude: [[./files/blank-lines-1.org]]
+-----
+** Other files
+-----
+#+transclude: [[./files/blank-lines-1.el]]
+-----
+#+transclude: [[./files/blank-lines-1.el]]  :lines 2-3
+-----
+** Source files
+-----
+#+transclude: [[./files/blank-lines-1.el]]  :src emacs-lisp
+-----
+#+transclude: [[./files/blank-lines-1.el]]  :lines 2-3 :src emacs-lisp
+-----

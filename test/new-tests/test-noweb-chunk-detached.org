@@ -1,0 +1,92 @@
+* Test Scope
+
+ * ~:noweb-chunk~
+
+* Tests
+-----
+#+begin_src python
+  print('line 1')
+  print('line 2')
+  print('line 3')
+  print('line 4')
+  print('line 5')
+  print('line 6 -- last line')
+#+end_src
+-----
+#+begin_src python
+  def test_bbb ():
+      print('bbb')
+#+end_src
+-----
+#+begin_src python
+  def test_ccc ():
+      print('ccc')
+#+end_src
+-----
+#+begin_src python
+  def test_long_chunk_name():
+      print('a long chunk name')
+#+end_src
+-----
+** Blank lines
+Blank lines at end of contents should not be transcluded.
+-----
+#+begin_src python
+  def test_aaa ():
+      print('aaa')
+
+  # Some blank lines at the end of the file that should not be transcluded.
+#+end_src
+-----
+
+** Newline
+The following transcluded file is missing a newline at the end of the file.
+-----
+#+begin_src python
+  def test_aaa ():
+      print('aaa')
+
+  # Newline missing at the end of this file.
+#+end_src
+-----
+
+** End of chunk
+-----
+#+begin_src python
+  def test_aaa ():
+      print('aaa')
+
+  # An @ sign inside a comment does not start a new text chunk.
+  # This is still part of the code chunk.
+  # @
+#+end_src
+-----
+
+** Limited range with ~:lines~
+*** ~:lines 3-5~
+-----
+#+begin_src python
+  print('line 3')
+  print('line 4')
+  print('line 5')
+#+end_src
+-----
+*** ~:lines -5~
+-----
+#+begin_src python
+  print('line 1')
+  print('line 2')
+  print('line 3')
+  print('line 4')
+  print('line 5')
+#+end_src
+-----
+*** ~:lines 3-~
+-----
+#+begin_src python
+  print('line 3')
+  print('line 4')
+  print('line 5')
+  print('line 6 -- last line')
+#+end_src
+-----

@@ -1,0 +1,53 @@
+* Test Scope
+
+ * blank lines (at end of contents: file, sections, ...)
+
+* Tests
+
+FIXME Blank lines between headline and first paragraph are missing
+             if there's a :PROPERTIES: section after the headline.
+
+** UUID links
+-----
+#+transclude: [[id:72ec52a3-72e9-4136-86eb-d51ba23b258d]]
+-----
+
+** Custom ID links
+-----
+#+transclude: [[./files/blank-lines-2.org::#my custom id]]
+-----
+
+** Dedicated links
+-----
+#+transclude: [[./files/blank-lines-2.org::paragraph-1]]
+-----
+
+** Named links
+-----
+#+transclude: [[./files/blank-lines-2.org::table]]
+-----
+#+transclude: [[./files/blank-lines-2.org::src-block]]
+-----
+** Internal headline links
+-----
+#+transclude: [[./files/blank-lines-2.org::*BBB]]
+-----
+** Internal headline links with ~:no-first-heading~
+-----
+#+transclude: [[./files/blank-lines-2.org::*BBB]] :no-first-heading
+-----
+#+transclude: [[./files/blank-lines-2.org::*DDD]] :no-first-heading
+-----
+** Regex links
+-----
+# #+transclude: [[./files/blank-lines-2.org::/Tristique/]]
+-----
+# #+transclude: [[./files/blank-lines-2.org::/Proin/]]
+-----
+FIXME: Regex links not working yet
+
+
+** Complete file links
+-----
+#+transclude: [[./files/blank-lines-2.org]]
+-----

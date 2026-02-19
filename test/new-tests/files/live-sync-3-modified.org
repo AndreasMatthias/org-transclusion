@@ -1,0 +1,10 @@
+* Live sync editing
+
+#+name: src-block-1
+#+begin_src emacs-lisp
+(message "line 1")
+(message "line 2")
+(message "live sync")
+(message "line 3")
+(message "line 4")
+#+end_src

@@ -1,0 +1,22 @@
+* Test Scope
+
+ * ~:level~
+   
+* Tests
+
+** Demote → Level 2
+#+transclude: [[./files/links-1.org]] :level 2
+-----
+
+** Demote → Level 3
+#+transclude: [[./files/links-1.org]] :level 3
+-----
+
+** Promote → Level 1
+#+transclude: [[./files/links-1.org::*Vivamus]] :level 1
+-----
+
+** Demote → Level 3
+-----
+#+transclude: [[./files/links-1.org::*Vivamus]] :level 3
+-----

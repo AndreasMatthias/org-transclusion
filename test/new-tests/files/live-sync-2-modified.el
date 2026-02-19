@@ -1,0 +1,5 @@
+(message "line 1")
+(message "line 2")
+(message "live sync")
+(message "line 3")
+(message "line 4")

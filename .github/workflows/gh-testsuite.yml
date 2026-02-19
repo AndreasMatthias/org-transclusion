@@ -1,0 +1,33 @@
+name: Testsuite
+on: [push, pull_request]
+
+jobs:
+  testsuite:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+
+      - name: Checkout org-transclusion
+        uses: actions/checkout@v4
+      
+      - name: Install Emacs
+        uses: purcell/setup-emacs@master
+        with:
+          version: release-snapshot
+
+      - name: Install Org-Mode
+        run: |
+          cd ~
+          mkdir -p .config/emacs/dev-repo/
+          cd .config/emacs/dev-repo/
+          git clone git://git.savannah.gnu.org/emacs/org-mode.git
+          cd org-mode
+          git checkout main
+          make
+
+      - name: Run tests
+        run: |
+          mkdir ~/.emacs.d
+          touch ~/.emacs.d/.org-id-locations
+          cd test/new-tests
+          ./run_testsuite.sh

@@ -1,0 +1,10 @@
+* Test Scope
+
+ * ~:expand-links~
+
+* Tests
+-----
+Link 1: [[<CURRENT-DIR>files/lorem.org]]
+
+Link 2: [[file:<CURRENT-DIR>files/lorem.org]]
+-----

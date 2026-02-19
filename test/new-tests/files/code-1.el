@@ -1,0 +1,8 @@
+(defun test ()
+  (message "line 2")
+  (message "line 3")
+  (let ((indentation "line 4"))
+    (message "line 5")
+    (message "line 6"))
+  (message "line 7")
+  (message "line 8"))

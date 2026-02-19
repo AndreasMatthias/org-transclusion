@@ -1,0 +1,53 @@
+* Test Scope
+
+ * UUID links -- =[[id:2c76a511]]]=
+ * Custom ID links -- =[[./file.org::#custom-id]]=
+ * Dedicated links -- =[[./file.org::paragraph]]=
+ * Internal headline links -- =[[./file.org::*headline]]=
+ * File links -- =[[./file.org]]=
+
+* Tests
+FIXME Blank lines between headline and first paragraph are removed. Is this correct/desirable?
+
+** UUID links
+-----
+#+transclude: [[id:8226f061-a991-438f-88ab-c27e78758095]]
+-----
+
+** Custom ID links
+-----
+#+transclude: [[./files/links-1.org::#id-section-1]]
+-----
+#+transclude: [[./files/links-1.org::#id-chapter-1]]
+-----
+
+** Dedicated links
+-----
+#+transclude: [[./files/links-1.org::paragraph-1]]
+-----
+#+transclude: [[./files/links-1.org::item]]
+-----
+#+transclude: [[./files/links-1.org::table]]
+-----
+#+transclude: [[./files/links-1.org::src-block]]
+-----
+
+** Internal headline links
+-----
+#+transclude: [[./files/links-1.org::*Vivamus]]
+-----
+
+** Internal headline links with ~:no-first-heading~
+-----
+#+transclude: [[./files/links-1.org::*Vivamus]] :no-first-heading
+-----
+
+** Regex links
+-----
+FIXME Not supported yet.
+-----
+
+** Complete file links
+-----
+#+transclude: [[./files/links-1.org]]
+-----

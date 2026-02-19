@@ -1,0 +1,139 @@
+* Test Scope
+
+ * ~:exclude-elements~
+
+* Tests
+FIXME Is it correct? I guess so. But intuitively I'd expect to see
+            1. all paragraphs of all subsections and
+            2. no headlines, not even the very first one.
+-----
+* Chapter
+Lorem ipsum dolor sit amet.
+-----
+* Chapter
+** Section 1
+*** Subsection 1a
+** Section 2
+-----
+* Comments
+** Line comments
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+** Block comments
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+-----
+* Horizontal rules
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+-----
+* Plain list
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+-----
+* Table
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+-----
+* LaTeX
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+-----
+* Example
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+-----
+* Quotation
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+-----
+* Chapter
+Lorem ipsum dolor sit amet.
+** Section 1
+Consectetur adipiscing elit.
+*** Subsection 1a
+** Section 2
+Cras vehicula tellus ipsum
+
+* Comments
+** Line comments
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+** Block comments
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+* Horizontal rules
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+* Plain list
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+* Table
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+* LaTeX
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+* Example
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+
+* Quotation
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula tellus ipsum, ut
+posuere nibh semper sodales. Aenean a iaculis ligula.
+
+Fusce bibendum volutpat lorem, ac tempor lacus. Ut convallis posuere magna, vitae laoreet
+mauris ultricies eu.
+-----

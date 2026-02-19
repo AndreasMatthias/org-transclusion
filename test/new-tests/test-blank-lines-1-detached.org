@@ -1,0 +1,35 @@
+* Test Scope
+
+ * blank lines (at end of file)
+
+* Tests
+** Org files
+-----
+first paragraph
+
+second paragraph
+
+third paragraph (followed by 3 blank lines)
+-----
+** Other files
+-----
+(message "111")
+(message "222")
+(message "this line is followed by 3 blank lines")
+-----
+(message "222")
+(message "this line is followed by 3 blank lines")
+-----
+** Source files
+-----
+#+begin_src emacs-lisp
+  (message "111")
+  (message "222")
+  (message "this line is followed by 3 blank lines")
+#+end_src
+-----
+#+begin_src emacs-lisp
+  (message "222")
+  (message "this line is followed by 3 blank lines")
+#+end_src
+-----
