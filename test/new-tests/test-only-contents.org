@@ -1,0 +1,15 @@
+* Test Scope
+
+ * ~:only-contents~
+
+* Tests
+** Content of a whole file
+-----
+#+transclude: [[./files/links-1.org]] :only-contents
+-----
+** Content of one section
+-----
+#+transclude: [[./files/links-1.org::*Lorem ipsum]] :only-contents
+-----
+#+transclude: [[./files/links-1.org::*Vivamus]] :only-contents
+-----

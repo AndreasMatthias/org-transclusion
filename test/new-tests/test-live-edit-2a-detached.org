@@ -1,0 +1,10 @@
+* Test Scope
+
+ * Live-editing: Org files with blank lines
+
+* Tests
+-----
+first paragraph
+
+there are 3 blank lines after this line
+-----

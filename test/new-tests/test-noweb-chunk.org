@@ -1,0 +1,44 @@
+* Test Scope
+
+ * ~:noweb-chunk~
+
+* Tests
+-----
+#+transclude: [[./files/noweb-chunk-1.nw::aaa]] :noweb-chunk :src python
+-----
+#+transclude: [[./files/noweb-chunk-1.nw::bbb]] :noweb-chunk :src python
+-----
+#+transclude: [[./files/noweb-chunk-1.nw::ccc]] :noweb-chunk :src python
+-----
+#+transclude: [[./files/noweb-chunk-1.nw::long chunk name]] :noweb-chunk :src python
+-----
+** Blank lines
+Blank lines at end of contents should not be transcluded.
+-----
+#+transclude: [[./files/noweb-chunk-2.nw::aaa]] :noweb-chunk :src python
+-----
+
+** Newline
+The following transcluded file is missing a newline at the end of the file.
+-----
+#+transclude: [[./files/noweb-chunk-3.nw::aaa]] :noweb-chunk :src python
+-----
+
+** End of chunk
+-----
+#+transclude: [[./files/noweb-chunk-4.nw::aaa]] :noweb-chunk :src python
+-----
+
+** Limited range with ~:lines~
+*** ~:lines 3-5~
+-----
+#+transclude: [[./files/noweb-chunk-1.nw::aaa]] :noweb-chunk :lines 3-5 :src python
+-----
+*** ~:lines -5~
+-----
+#+transclude: [[./files/noweb-chunk-1.nw::aaa]] :noweb-chunk :lines -5 :src python
+-----
+*** ~:lines 3-~
+-----
+#+transclude: [[./files/noweb-chunk-1.nw::aaa]] :noweb-chunk :lines 3- :src python
+-----

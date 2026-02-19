@@ -1,0 +1,3 @@
+Link 1: [[./lorem.org]]
+
+Link 2: [[file:./lorem.org]]

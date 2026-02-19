@@ -1,0 +1,8 @@
+* Test Scope
+
+ * Live-editing: Org files with blank lines
+
+* Tests
+-----
+#+transclude: [[./files/live-edit-2.org]]
+-----

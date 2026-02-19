@@ -1,0 +1,8 @@
+* Test Scope
+
+ * Live-edit: Source code file
+
+* Tests
+-----
+#+transclude: [[./files/live-edit-3.el]]  :src emacs-lisp
+-----

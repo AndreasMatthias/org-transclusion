@@ -1,0 +1,24 @@
+this is
+paragraph 1
+<<paragraph 1>>
+
+this is
+paragraph 2
+<<paragraph 2>>
+
+#+name: named-src-block
+#+begin_src sh
+echo "test"
+#+end_src
+
+#+begin_src sh
+echo "not part of previous named src block"
+#+end_src
+
+#+name: table
+| Name  | Phone | Age |
+|-------+-------+-----|
+| Peter |  1234 |  17 |
+| Anna  |  4321 |  25 |
+
+

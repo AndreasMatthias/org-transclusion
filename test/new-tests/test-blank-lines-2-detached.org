@@ -1,0 +1,150 @@
+* Test Scope
+
+ * blank lines (at end of contents: file, sections, ...)
+
+* Tests
+
+FIXME Blank lines between headline and first paragraph are missing
+             if there's a :PROPERTIES: section after the headline.
+
+** UUID links
+-----
+* DDD
+Nunc tincidunt mi ac feugiat pulvinar. Ut venenatis placerat orci nec ultrices.
+Sed mattis elementum nibh id pharetra. Morbi vulputate nisi vel euismod
+fringilla.
+-----
+
+** Custom ID links
+-----
+* CCC
+Quisque dignissim vulputate ipsum, quis cursus metus gravida id. Pellentesque
+convallis viverra molestie. Donec et nisi venenatis, pretium tortor quis,
+venenatis mauris. Nunc pellentesque eleifend imperdiet.
+-----
+
+** Dedicated links
+-----
+Maecenas et risus vel nibh bibendum mattis. Vivamus non aliquam risus. Fusce vel
+sapien non nisi rhoncus imperdiet.
+<<paragraph-1>>
+-----
+
+** Named links
+-----
+#+name: table
+| Vivamus   | Lobortis | Dapibus |
+|-----------+----------+---------|
+| Tristique |      123 | abc     |
+| Quam      |      456 | def     |
+| Convallis |      789 | ghi     |
+-----
+#+name: src-block
+#+begin_src sh
+  echo "hello"
+  echo "world"
+#+end_src
+-----
+** Internal headline links
+-----
+* BBB
+
+
+Maecenas et risus vel nibh bibendum mattis. Vivamus non aliquam risus. Fusce vel
+sapien non nisi rhoncus imperdiet.
+<<paragraph-1>>
+
+
+Praesent efficitur ligula non metus porta, non ultrices sem hendrerit.
+Vestibulum sit amet semper quam.
+<<paragraph-2>>
+-----
+** Internal headline links with ~:no-first-heading~
+-----
+Maecenas et risus vel nibh bibendum mattis. Vivamus non aliquam risus. Fusce vel
+sapien non nisi rhoncus imperdiet.
+<<paragraph-1>>
+
+
+Praesent efficitur ligula non metus porta, non ultrices sem hendrerit.
+Vestibulum sit amet semper quam.
+<<paragraph-2>>
+-----
+Nunc tincidunt mi ac feugiat pulvinar. Ut venenatis placerat orci nec ultrices.
+Sed mattis elementum nibh id pharetra. Morbi vulputate nisi vel euismod
+fringilla.
+-----
+** Regex links
+-----
+# #+transclude: [[./files/blank-lines-2.org::/Tristique/]]
+-----
+# #+transclude: [[./files/blank-lines-2.org::/Proin/]]
+-----
+FIXME: Regex links not working yet
+
+
+** Complete file links
+-----
+* AAA
+
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum quam
+condimentum, pulvinar mauris nec, iaculis neque.
+
+Donec vestibulum ultrices massa vitae dictum. Proin volutpat lectus eget urna
+cursus tincidunt. Nulla facilisi.
+
+Praesent libero eros, laoreet a ex a, auctor accumsan diam. Duis id ipsum ac
+eros condimentum rutrum at vel lorem.
+
+
+
+
+* BBB
+
+
+Maecenas et risus vel nibh bibendum mattis. Vivamus non aliquam risus. Fusce vel
+sapien non nisi rhoncus imperdiet.
+<<paragraph-1>>
+
+
+Praesent efficitur ligula non metus porta, non ultrices sem hendrerit.
+Vestibulum sit amet semper quam.
+<<paragraph-2>>
+
+
+
+* CCC
+Quisque dignissim vulputate ipsum, quis cursus metus gravida id. Pellentesque
+convallis viverra molestie. Donec et nisi venenatis, pretium tortor quis,
+venenatis mauris. Nunc pellentesque eleifend imperdiet.
+
+
+* DDD
+Nunc tincidunt mi ac feugiat pulvinar. Ut venenatis placerat orci nec ultrices.
+Sed mattis elementum nibh id pharetra. Morbi vulputate nisi vel euismod
+fringilla.
+
+
+
+* EEE
+
+
+#+name: table
+| Vivamus   | Lobortis | Dapibus |
+|-----------+----------+---------|
+| Tristique |      123 | abc     |
+| Quam      |      456 | def     |
+| Convallis |      789 | ghi     |
+
+
+* FFF
+
+
+#+name: src-block
+#+begin_src sh
+  echo "hello"
+  echo "world"
+#+end_src
+-----

@@ -1,0 +1,34 @@
+* Test Scope
+
+ * ~:thing-at-point~
+
+* Tests
+** Non-org files
+-----
+Nullam id porta risus.
+-----
+Nullam id porta risus.  Etiam sollicitudin leo et egestas mollis.  Class aptent taciti
+sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.  Sed sollicitudin
+purus nec mi blandit, et luctus quam porta.  Vestibulum lobortis nulla ut fringilla
+fermentum.  In tincidunt neque eu leo posuere, sed consectetur est rhoncus.  Pellentesque
+nisi ante, maximus nec felis aliquam, eleifend mollis felis.  Morbi gravida libero vel
+commodo pulvinar.
+-----
+
+** Org files
+The following only works if ~org-link-search-must-match-exact-headline~ is ~nil~,
+i.e. only for fuzzy search.
+FIXME However it seems to be broken currently.
+-----
+# #+transclude: [[./files/thing-at-point.org::Nullam]]  :thing-at-point sentence
+-----
+# #+transclude: [[./files/thing-at-point.org::Nullam]]  :thing-at-point paragraph
+-----
+
+** Broken
+FIXME While ~defun~ and ~sexp~ are documented as functional, they are currently broken.
+-----
+# #+transclude: [[./files/thing-at-point.el::id-123]]  :src emacs-lisp :thing-at-point defun
+-----
+# #+transclude: [[./files/thing-at-point.el::id-123]]  :src emacs-lisp :thing-at-point sexp
+-----

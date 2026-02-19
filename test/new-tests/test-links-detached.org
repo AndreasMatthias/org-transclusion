@@ -1,0 +1,140 @@
+* Test Scope
+
+ * UUID links -- =[[id:2c76a511]]]=
+ * Custom ID links -- =[[./file.org::#custom-id]]=
+ * Dedicated links -- =[[./file.org::paragraph]]=
+ * Internal headline links -- =[[./file.org::*headline]]=
+ * File links -- =[[./file.org]]=
+
+* Tests
+FIXME Blank lines between headline and first paragraph are removed. Is this correct/desirable?
+
+** UUID links
+-----
+** Nullam
+Nullam facilisis nibh vitae arcu porttitor tristique. Praesent maximus odio ut accumsan
+condimentum. Cras malesuada mi ut lacus condimentum lacinia. Aenean sodales id sapien eu
+eleifend. In aliquam ligula eu dolor molestie, quis efficitur enim sollicitudin.
+<<paragraph-2>>
+-----
+
+** Custom ID links
+-----
+** Lorem
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum risus, non
+tincidunt lacus maximus porta. Aenean efficitur diam a facilisis hendrerit. Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+<<paragraph-1>>
+-----
+* Lorem ipsum
+** Lorem
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum risus, non
+tincidunt lacus maximus porta. Aenean efficitur diam a facilisis hendrerit. Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+<<paragraph-1>>
+
+** Nullam
+Nullam facilisis nibh vitae arcu porttitor tristique. Praesent maximus odio ut accumsan
+condimentum. Cras malesuada mi ut lacus condimentum lacinia. Aenean sodales id sapien eu
+eleifend. In aliquam ligula eu dolor molestie, quis efficitur enim sollicitudin.
+<<paragraph-2>>
+
+** Vivamus
+Vivamus lobortis dapibus sagittis. Donec tristique quam et velit convallis, sed efficitur
+lectus semper. Sed sagittis, leo id auctor tincidunt, risus purus facilisis leo, quis
+dictum eros tellus eu purus.
+<<paragraph-3>>
+-----
+
+** Dedicated links
+-----
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum risus, non
+tincidunt lacus maximus porta. Aenean efficitur diam a facilisis hendrerit. Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+<<paragraph-1>>
+-----
+laoreet <<item>>
+-----
+#+name: table
+| Vivamus   | Lobortis | Dapibus |
+|-----------+----------+---------|
+| Tristique |      123 | abc     |
+| Quam      |      456 | def     |
+| Convallis |      789 | ghi     |
+-----
+#+name: src-block
+#+begin_src sh
+  echo "hello"
+  echo "world"
+#+end_src
+-----
+
+** Internal headline links
+-----
+** Vivamus
+Vivamus lobortis dapibus sagittis. Donec tristique quam et velit convallis, sed efficitur
+lectus semper. Sed sagittis, leo id auctor tincidunt, risus purus facilisis leo, quis
+dictum eros tellus eu purus.
+<<paragraph-3>>
+-----
+
+** Internal headline links with ~:no-first-heading~
+-----
+Vivamus lobortis dapibus sagittis. Donec tristique quam et velit convallis, sed efficitur
+lectus semper. Sed sagittis, leo id auctor tincidunt, risus purus facilisis leo, quis
+dictum eros tellus eu purus.
+<<paragraph-3>>
+-----
+
+** Regex links
+-----
+FIXME Not supported yet.
+-----
+
+** Complete file links
+-----
+* Lorem ipsum
+** Lorem
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales ipsum risus, non
+tincidunt lacus maximus porta. Aenean efficitur diam a facilisis hendrerit. Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+<<paragraph-1>>
+
+** Nullam
+Nullam facilisis nibh vitae arcu porttitor tristique. Praesent maximus odio ut accumsan
+condimentum. Cras malesuada mi ut lacus condimentum lacinia. Aenean sodales id sapien eu
+eleifend. In aliquam ligula eu dolor molestie, quis efficitur enim sollicitudin.
+<<paragraph-2>>
+
+** Vivamus
+Vivamus lobortis dapibus sagittis. Donec tristique quam et velit convallis, sed efficitur
+lectus semper. Sed sagittis, leo id auctor tincidunt, risus purus facilisis leo, quis
+dictum eros tellus eu purus.
+<<paragraph-3>>
+
+* Donec
+Donec sit amet ipsum quam. Aliquam quis nibh quis metus bibendum fermentum a ut
+eros. Mauris at ligula eu leo lobortis tincidunt. Curabitur tristique massa eu turpis
+pellentesque iaculis ut nec turpis.
+
+1. vulputate
+2. laoreet <<item>>
+3. molestie
+
+* Aliquam
+
+** Table
+#+name: table
+| Vivamus   | Lobortis | Dapibus |
+|-----------+----------+---------|
+| Tristique |      123 | abc     |
+| Quam      |      456 | def     |
+| Convallis |      789 | ghi     |
+
+** Source blocks
+#+name: src-block
+#+begin_src sh
+  echo "hello"
+  echo "world"
+#+end_src
+-----

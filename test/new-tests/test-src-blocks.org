@@ -1,0 +1,55 @@
+* Test Scope
+
+ * ~:src~
+ * ~:lines~
+ * ~:rest~
+ * ~:omit-first-line~
+
+* Tests
+
+** Complete file
+-----
+#+transclude: [[./files/code-1.el]]  :src emacs-lisp
+-----
+
+** With ~:rest~
+-----
+#+transclude: [[./files/code-1.el]]  :src emacs-lisp :rest ":results silent"
+-----
+
+** With ~:lines~
+FIXME: Indentation with ~:lines~ is broken.
+
+ * ~:lines -3~
+-----
+#+transclude: [[./files/code-1.el]]  :lines -3 :src emacs-lisp
+-----
+ * ~:lines 2-5~
+-----
+#+transclude: [[./files/code-1.el]]  :lines 2-5 :src emacs-lisp
+-----
+ * ~:lines 4-~
+-----
+#+transclude: [[./files/code-1.el]]  :lines 4- :src emacs-lisp
+-----
+ * ~:lines 5-~
+#+transclude: [[./files/code-1.el]]  :lines 5- :src emacs-lisp
+
+** Begin and end marker
+
+ * begin marker
+-----
+#+transclude: [[./files/code-2.el::id-123]]  :src emacs-lisp
+-----
+ * end marker
+-----
+#+transclude: [[./files/code-2.el]]  :src emacs-lisp :end "end id-123"
+-----
+ * begin/end marker
+-----
+#+transclude: [[./files/code-2.el::begin id-123]]  :src emacs-lisp :end "end id-123"
+-----
+ * begin/end marker, ~:lines~
+#+transclude: [[./files/code-2.el::begin id-123]]  :lines 3- :src emacs-lisp :end "end id-123"
+-----
+

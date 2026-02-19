@@ -1,0 +1,8 @@
+* Test Scope
+
+ * Live-editing: Org files
+
+* Tests
+-----
+#+transclude: [[./files/live-edit-1.org]]
+-----

@@ -1,0 +1,8 @@
+* Test Scope
+
+ * ~:expand-links~
+
+* Tests
+-----
+#+transclude: [[./files/expand-links.org]] :expand-links
+-----

@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       c34969e2-394f-4370-b9a5-3dfde4f2030c
+:END:
+
+* Test AAA
+:PROPERTIES:
+:CUSTOM_ID: test_aaa_id
+:ID:       713e3729-3b2f-482d-81f6-7213f60c38ad
+:END:
+a1
+a2
+a3
+
+* Test BBB
+:PROPERTIES:
+:CUSTOM_ID: test_bbb_id
+:ID:       0b0b2e47-816c-4fc2-b6b6-9a0c367a3669
+:END:
+b1
+b2
+b3
+
+* Test CCC
+c1
+c2
+c3
