@@ -1376,7 +1376,7 @@ active."
     ;; If NO-FIRST-HEADING, delete the first level
     (and (org-at-heading-p)
          (plist-get keyword-values :no-first-heading)
-         (delete-line))
+         (org-transclusion--delete-headline))
     (let* ((raw-to-level (plist-get keyword-values :level))
            (to-level (if (and (stringp raw-to-level)
                               (string= raw-to-level "auto"))
@@ -1395,6 +1395,13 @@ active."
               ((> diff 0) ; promote
                (org-map-entries (lambda ()
                                   (dotimes (_ diff) (org-do-promote))))))))))
+
+(defun org-transclusion--delete-headline ()
+  "Delete headline and possibly following blank lines.
+Point shall be in the same line as the headline."
+  (delete-line)
+  (looking-at "\\([[:space:]]*\n\\)*")
+  (delete-region (match-beginning 0) (match-end 0)))
 
 (defun org-transclusion-content-format (_type content keyword-values)
   "Format text CONTENT from source before transcluding.
